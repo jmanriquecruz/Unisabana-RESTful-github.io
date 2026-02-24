@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>REST Validator Pro</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body>
+
+        <div class="tabs">
+      <button class="tab-btn active" data-tab="validator">Validator</button>
+      <button class="tab-btn" data-tab="animation">REST Flow</button>
+    </div>
+
+    <!-- TAB CONTENT -->
+    <div class="tab-content">
+
+      <!-- ===== VALIDATOR TAB ===== -->
+      <div id="validator" class="tab-pane active">
+    <div class="app">
+      <header>
+        <h1>REST Architecture Validator</h1>
+        <p>Enterprise RESTful Pattern Analyzer</p>
+      </header>
+
+      <div class="card">
+        <div class="form-group">
+          <label>Método HTTP</label>
+          <select id="method">
+            <option>GET</option>
+            <option>POST</option>
+            <option>PUT</option>
+            <option>DELETE</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Endpoint URL</label>
+          <input type="text" id="url" placeholder="/api/users/1" />
+        </div>
+<div class="strict-toggle">
+    <label>
+        <div class="strict-container">
+    <label class="switch">
+        <input type="checkbox" id="strictMode">
+        <span class="slider"></span>
+    </label>
+    <span class="strict-label">Strict REST Mode</span>
+</div>
+        Activar Strict REST Mode
+    </label>
+</div>
+       <button id="analyzeBtn" class="primary-btn">
+             Analizar Arquitectura
+    </button>
+      </div>
+
+      <div class="result-card">
+        <h3>Resultado de Validación</h3>
+        <div id="status"></div>
+        <ul id="suggestions"></ul>
+      </div>
+      <div class="score-container">
+        <div id="trafficLight" class="traffic-light"></div>
+
+        <div class="score-header">
+          <h2 id="scoreValue">Score: 0%</h2>
+          <span class="info-icon"
+            >🛈
+            <div class="tooltip" id="rulesTooltip"></div>
+          </span>
+        </div>
+      </div>
+
+      <div class="recommendation">
+        <h3>Endpoint Recomendado</h3>
+        <code id="recommendedEndpoint"></code>
+      </div>
+    </div>
+    </div>
+
+      <!-- ===== ANIMATION TAB ===== -->
+      <div id="animation" class="tab-pane">
+
+        <div class="architecture">
+            <div class="arrow-vertical"></div>
+
+   <div class="box client">
+    <h3>Client</h3>
+    <p id="httpMethodLabel">POST /api/orders</p>
+  </div>
+
+  <div class="box api">
+    <h3>REST API</h3>
+    <p>Controller → Service</p>
+  </div>
+
+  <div class="box db">
+    <h3>Database</h3>
+    <p>INSERT Order</p>
+  </div>
+
+  <div class="packet request"></div>
+  <div class="packet response"></div>
+
+<!-- 👇 AQUÍ -->
+<div class="arrow arrow-request"></div>
+<div class="arrow arrow-response"></div>
+<div class="latency" id="latencyBox"></div>
+
+  <!-- Headers -->
+  <div class="headers-panel">
+    <h4>HTTP Headers</h4>
+    <pre id="headersOutput"></pre>
+  </div>
+
+  <!-- Status -->
+  <div class="status-code" id="statusCodeBox">
+    200 OK
+  </div>
+
+  <button onclick="startFlow()" class="primary-btn">
+    Ejecutar Flujo
+  </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+        <script type="module" src="js/app.js"></script>
+        <script src="js/tabs.js"></script>
+        <script src="js/animation.js"></script>
+  </body>
+</html>
