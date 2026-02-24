@@ -299,8 +299,8 @@ input:checked + .slider:before {
 
 .status-code {
   position: absolute;
-  top: 15%;
-  left: 50%;
+  top: 10%;
+  left: 45%;
   transform: translateX(-50%) scale(0.8);
   padding: 8px 18px;
   border-radius: 20px;
