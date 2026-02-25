@@ -1,11 +1,11 @@
 
-import { ApiPrefixRule } from "./ApiPrefixRule.js";
-import { NoVerbRule } from "./ApiPrefixRule.js";
-import { PluralRule } from "./ApiPrefixRule.js";
-import { HttpMethodRule } from "./ApiPrefixRule.js";
-import { IdRule } from "./ApiPrefixRule.js";
-import { StrictLowercaseRule } from "./ApiPrefixRule.js";
-import { StrictSnakeCaseRule } from "./ApiPrefixRule.js";
+import { ApiPrefixRule } from "./rules.js";
+import { NoVerbRule } from "./rules.js";
+import { PluralRule } from "./rules.js";
+import { HttpMethodRule } from "./rules.js";
+import { IdRule } from "./rules.js";
+import { StrictLowercaseRule } from "./rules.js";
+import { StrictSnakeCaseRule } from "./rules.js";
 
 export  class RuleEngine {
 
